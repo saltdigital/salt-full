@@ -74,6 +74,15 @@
 
   // Your custom JavaScript goes here
 
+  document.addEventListener('DOMContentLoaded', function(){
+      Typed.new('.typed', {
+        strings: ["Simple.", "Easy.", "Efficient.", "Satisfying.", "Effective."],
+        typeSpeed: 80,
+        loop: true
+      });
+  });
+
+
   // Video Javascript
   // ================
   // var vid = document.getElementById('bgvid');
