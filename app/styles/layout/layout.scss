@@ -47,9 +47,6 @@ ul {
   @include breakpoint(medium) {
     flex-direction: row;
   }
-  // &__item {
-  //   max-width: 500px;
-  // }
   &__item-content {
     max-width: 350px;
     h1 {
