@@ -35,3 +35,25 @@
     margin: 0 auto;
   }
 }
+
+
+.bread-wrapper {
+  position: relative;
+  width: 500px;
+  // width: 100%;
+  height: 500px;
+}
+.bread-1, .bread-2 {
+  position: absolute;
+  max-width: inherit;
+}
+.bread-1 {
+  top: 45%;
+  right: -10px;
+  z-index: 2;
+}
+.bread-2 {
+  top: 30px;
+  left: -90px;
+  z-index: 1;
+}
