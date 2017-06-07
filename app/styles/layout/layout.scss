@@ -1,13 +1,18 @@
 body {
   margin: 0;
   background: #FFFFFF;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Pangram', sans-serif;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pangram', sans-serif;
+  font-weight: bold;
 }
 .container {
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
   @include breakpoint(large) {
     padding: 0 40px;
   }

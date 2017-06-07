@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Pangram';
+  src: url('../assets/fonts/Pangram-Black.eot');
+  src: url('../assets/fonts/Pangram-Black.woff2') format('woff2'),
+       url('../assets/fonts/Pangram-Black.woff') format('woff'),
+       url('../assets/fonts/Pangram-Black.ttf') format('truetype'),
+       url('../assets/fonts/Pangram-Black.svg#Pangram-Black') format('svg'),
+       url('../assets/fonts/Pangram-Black.eot?#iefix') format('embedded-opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pangram';
+  src: url('../assets/fonts/Pangram-Bold.eot');
+  src: url('../assets/fonts/Pangram-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Pangram-Bold.woff') format('woff'),
+       url('../assets/fonts/Pangram-Bold.ttf') format('truetype'),
+       url('../assets/fonts/Pangram-Bold.svg#Pangram-Bold') format('svg'),
+       url('../assets/fonts/Pangram-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pangram';
+  src: url('../assets/fonts/Pangram-Medium.eot');
+  src: url('../assets/fonts/Pangram-Medium.woff2') format('woff2'),
+       url('../assets/fonts/Pangram-Medium.woff') format('woff'),
+       url('../assets/fonts/Pangram-Medium.ttf') format('truetype'),
+       url('../assets/fonts/Pangram-Medium.svg#Pangram-Medium') format('svg'),
+       url('../assets/fonts/Pangram-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pangram';
+  src: url('../assets/fonts/Pangram-Regular.eot');
+  src: url('../assets/fonts/Pangram-Regular.woff2') format('woff2'),
+       url('../assets/fonts/Pangram-Regular.woff') format('woff'),
+       url('../assets/fonts/Pangram-Regular.ttf') format('truetype'),
+       url('../assets/fonts/Pangram-Regular.svg#Pangram-Regular') format('svg'),
+       url('../assets/fonts/Pangram-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pangram';
+  src: url('../assets/fonts/Pangram-Light.eot');
+  src: url('../assets/fonts/Pangram-Light.woff2') format('woff2'),
+       url('../assets/fonts/Pangram-Light.woff') format('woff'),
+       url('../assets/fonts/Pangram-Light.ttf') format('truetype'),
+       url('../assets/fonts/Pangram-Light.svg#Pangram-Light') format('svg'),
+       url('../assets/fonts/Pangram-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: normal;
+}
