@@ -76,7 +76,7 @@
 
   document.addEventListener('DOMContentLoaded', function(){
       Typed.new('.typed', {
-        strings: ["Simple.", "Easy.", "Efficient.", "Satisfying.", "Effective."],
+        strings: ["Simple.", "Easy.", "Efficient.", "Effective."],
         typeSpeed: 80,
         loop: true
       });
