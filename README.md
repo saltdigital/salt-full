@@ -1,3 +1,3 @@
-# Salt Teaser Site
+# Salt Full Site
 
-Teaser website for Salt Digital utiliziing Google's Web Starter Kit
+Full website for Salt Digital utiliziing Google's Web Starter Kit
