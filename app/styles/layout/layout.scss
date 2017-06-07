@@ -3,6 +3,7 @@ body {
   background: #FFFFFF;
   font-family: 'Pangram', sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Pangram', sans-serif;
@@ -10,6 +11,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 p, a {
   font-family: 'Pangram', sans-serif;
+  letter-spacing: 1px;
+}
+p {
+  font-weight: 100;
 }
 ul {
   padding: 0;
