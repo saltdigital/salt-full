@@ -120,6 +120,7 @@
   z-index: 1;
 }
 .cheese {
+  opacity: 0.8;
   @include breakpoint(large) {
     top: -15%;
     left: -15%;
@@ -127,13 +128,15 @@
 }
 .butter {
   bottom: -16%;
-  right: -25%;
+  right: -40%;
+  opacity: 0.8;
 }
 .jalapeno {
   top: 5%;
   left: -15%;
 }
 .bacon {
+  opacity: 0.9;
   bottom: -15%;
   left: 5%;
   transform: rotate(280deg);
