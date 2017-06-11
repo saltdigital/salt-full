@@ -85,6 +85,12 @@ ul {
       flex: 0 1 50%;
     }
   }
+  &__third {
+    flex: 0 1 100%;
+    @include breakpoint(large) {
+      flex: 0 1 30%;
+    }
+  }
   &__item-content {
     max-width: 350px;
     h1 {
