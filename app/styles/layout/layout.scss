@@ -23,16 +23,15 @@ p {
 ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .btn {
-
   padding: 10px 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
   border: 1px solid black;
   transition: 300ms ease;
-
   position: relative;
   top: -5px;
   color: black;
@@ -79,6 +78,12 @@ ul {
   flex-direction: column;
   @include breakpoint(medium) {
     flex-direction: row;
+  }
+  &__half {
+    flex: 0 1 100%;
+    @include breakpoint(large) {
+      flex: 0 1 50%;
+    }
   }
   &__item-content {
     max-width: 350px;

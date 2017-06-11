@@ -1,0 +1,30 @@
+.service {
+  padding: 50px 0 80px 0;
+  &__headline {
+    padding: 50px 0;
+    h1 {
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+  }
+  &__web {
+    .service__headline {
+      padding-top: 120px;
+    }
+  }
+  &__marketing {
+    background: #000000;
+    color: white;
+    .flexbox {
+      flex-wrap: wrap;
+    }
+    .btn {
+      // background: #000000;
+      // color: #FFFFFF;
+      // border: 1px solid #FFFFFF;
+      // &:after {
+      //   background: #FFFFFF;
+      // }
+    }
+  }
+}
