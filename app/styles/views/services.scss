@@ -2,18 +2,21 @@
   padding: 50px 0 80px 0;
   text-align: center;
   &__headline {
-    padding: 50px 0;
+    padding: 50px 0 80px 0;
     text-align: left;
     h1 {
       text-transform: uppercase;
       font-weight: 800;
     }
+    p {
+      max-width: 650px;
+      width: 100%;
+    }
     @include breakpoint(large) {
       display: flex;
       p {
-        max-width: 650px;
-        width: 100%;
         margin: 0 auto;
+        padding-left: 20px;
       }
       h1 {
         max-width: 400px;
@@ -23,106 +26,190 @@
       }
     }
   }
-  &__web {
-    .service__headline {
-      padding-top: 120px;
+  .flexbox {
+    margin-bottom: 60px;
+  }
+} // end services
+
+.web {
+  .service__headline {
+    padding-top: 120px;
+  }
+  .flexbox {
+    justify-content: center;
+    @include breakpoint(medium) {
+      align-items: flex-start;
     }
-    .flexbox {
-      justify-content: center;
+  }
+  &-category {
+    text-align: left;
+    display: flex;
+    @include breakpoint(medium) {
+      display: block;
+      text-align: center;
+    }
+    &__icon {
+      height: 135px;
+    }
+    &__content {
+      margin-left: 50px;
+      max-width: 300px;
+      width: 100%;
       @include breakpoint(medium) {
-        align-items: flex-start;
+        margin: 0 auto;
       }
     }
-    &-step {
-      text-align: left;
+  }
+} // end web
+
+.marketing {
+  background: #000000;
+  color: white;
+  .flexbox {
+    flex-wrap: wrap;
+  }
+  h1 {
+    border-color: white;
+  }
+  &-category {
+    text-align: left;
+    margin-bottom: 30px;
+    h3 {
+      max-width: 153px;
+      width: 100%;
+      margin-right: auto;
+      border-right: 3px solid #FFFFFF;
+    }
+    p {
+      max-width: 650px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    @include breakpoint(medium) {
       display: flex;
-      @include breakpoint(medium) {
-        display: block;
+      align-items: center;
+      justify-content: center;
+      h3 {
+        max-width: 250px;
+      }
+      p {
+        max-width: 330px;
+      }
+    }
+    @include breakpoint(large) {
+      height: 350px;
+      margin-bottom: 0;
+      cursor: pointer;
+      &:first-of-type {
+        border-right: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+      }
+      &:nth-of-type(2) {
+        border-left: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+      }
+      &:nth-of-type(3) {
+        border-right: 2px solid #FFFFFF;
+        border-top: 2px solid #FFFFFF;
+      }
+      &:last-of-type {
+        border-left: 2px solid #FFFFFF;
+        border-top: 2px solid #FFFFFF;
+      }
+      p {
+        position: absolute;
+        max-width: 450px;
+        text-align: center;
+        opacity: 0;
+        transition: 300ms ease;
+      }
+      h3 {
+        opacity: 1;
+        transition: 300ms ease;
+        margin: 0;
+        border-width: 0;
         text-align: center;
       }
-      &__icon {
-        height: 135px;
-      }
-      &__content {
-        margin-left: 50px;
-        max-width: 300px;
-        width: 100%;
-        @include breakpoint(medium) {
-          margin: 0 auto;
-        }
-      }
-    }
-  }
-  &__marketing {
-    background: #000000;
-    color: white;
-    .flexbox {
-      flex-wrap: wrap;
-    }
-    h1 {
-      border-color: white;
-    }
-    &-category {
-      display: block;
-      text-align: left;
-      @include breakpoint(large) {
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        &:first-of-type {
-          border-right: 2px solid #FFFFFF;
-          border-bottom: 2px solid #FFFFFF;
-        }
-        &:nth-of-type(2) {
-          border-left: 2px solid #FFFFFF;
-          border-bottom: 2px solid #FFFFFF;
-        }
-        &:nth-of-type(3) {
-          border-right: 2px solid #FFFFFF;
-          border-top: 2px solid #FFFFFF;
-        }
-        &:last-of-type {
-          border-left: 2px solid #FFFFFF;
-          border-top: 2px solid #FFFFFF;
+      &:hover {
+        h3 {
+          opacity: 0;
         }
         p {
-          position: absolute;
-          max-width: 500px;
-          width: 100%;
-          text-align: center;
-          opacity: 0;
-          transition: 300ms ease;
-        }
-        h3 {
           opacity: 1;
-          transition: 300ms ease;
         }
-        &:hover {
-          h3 {
-            opacity: 0;
-          }
-          p {
-            opacity: 1;
-          }
-        }
-      }
-    }
-    .btn {
-      background: #FFFFFF;
-      color: #FFFFFF;
-      border: 1px solid #FFFFFF;
-      &:after {
-        content: "Get Started";
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #FFFFFF;
-        background: #000000;
-        z-index: 1;
-        border: 1px solid #FFFFFF;
       }
     }
   }
-}
+  .btn {
+    background: #FFFFFF;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    &:after {
+      content: "Get Started";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      background: #000000;
+      z-index: 1;
+      border: 1px solid #FFFFFF;
+    }
+  }
+} // end marketing
+
+.design {
+  h1 {
+      max-width: 300px;
+  }
+  &-category {
+    text-align: left;
+    .flexbox__half {
+      width: 100%;
+      justify-content: center;
+    }
+    &__content {
+      max-width: 450px;
+      width: 100%;
+    }
+    @include breakpoint(medium) {
+      &__content {
+        border-right: 3px solid #D00118;
+        padding-right: 70px;
+        margin-left: auto;
+      }
+      ul {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 100px;
+      }
+      &:nth-of-type(2) {
+        ul {
+          padding-left: 0;
+          padding-right: 30px;
+        }
+        .design-category__content {
+          border-width: 0;
+          border-left: 3px solid #D00118;
+          padding: 0;
+          padding-left: 100px;
+          margin-left: 0;
+          margin-right: auto;
+        }
+        .flexbox__half {
+          &:first-of-type {
+            order: 2;
+          }
+          &:last-of-type {
+            order: 1;
+          }
+        }
+      }
+    }
+    @include breakpoint(large) {
+      ul {
+        padding-left: 0;
+      }
+    }
+  }
+} // end design
