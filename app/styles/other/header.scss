@@ -37,6 +37,12 @@ header {
         &:hover {
           color: grey;
         }
+        &.active {
+          @include breakpoint(large) {
+            border-bottom: 1px solid #000000;
+            padding-bottom: 3px;
+          }
+        }
       }
     }
   }

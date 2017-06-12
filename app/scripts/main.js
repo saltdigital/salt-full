@@ -82,6 +82,20 @@
       });
   });
 
+  $(function() {
+
+  // add active class to current page menu item
+  var currentPage = location.pathname.split('/');
+  var pageName = currentPage[currentPage.length - 2];
+
+  // home page - index list item must have "home" id
+  if (pageName === ""){
+    $('nav li a#home').addClass('active');
+  } else  if (pageName ===  pageName){
+    $('nav li a#'+pageName).addClass('active');
+  }
+
+});
 
   // Video Javascript
   // ================
