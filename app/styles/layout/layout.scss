@@ -20,6 +20,11 @@ p {
     font-size: 24px;
   }
 }
+a {
+  &:focus {
+    color: grey;
+  }
+}
 ul {
   padding: 0;
   margin: 0;

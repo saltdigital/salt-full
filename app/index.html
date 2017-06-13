@@ -77,29 +77,29 @@
         <p class="font-large">Delicious meals curated with hand-selected ingredients, we approach our marketing strategy the same way you approach your cuisine. With Purpose.</p>
       </div>
 
-      <div class="flexbox flexbox-1">
+      <div id="trigger1" class="flexbox flexbox-1">
         <div class="flexbox__item flexbox__item-image">
-            <img src="assets/images/home/bread-1.png" alt="bread" class="bread-1">
-            <img src="assets/images/home/bread-2.png" alt="bread" class="bread-2">
+            <img src="assets/images/home/bread-1.png" alt="bread" class="bread-1 right">
+            <img src="assets/images/home/bread-2.png" alt="bread" class="bread-2  left">
         </div>
         <div class="flexbox__item flexbox__item-content">
             <h1>Web Development</h1>
             <p>The face of your online presence. The right design, build and execution to put your best foot forward.</p>
-            <a href="/services" class="btn">Learn More</a>
+            <a href="/services/#web" class="btn">Learn More</a>
         </div>
       </div>
       <div class="flexbox flexbox-2">
-        <div class="flexbox__item flexbox__item-image">
+        <div  id="trigger2" class="flexbox__item flexbox__item-image">
             <img src="assets/images/home/cheese.png" alt="cheese" class="cheese">
             <img src="assets/images/home/butter.png" alt="butter" class="butter show-for-large">
         </div>
         <div class="flexbox__item flexbox__item-content">
             <h1>Marketing</h1>
             <p>Attract new customers and retain existing ones. Get the right message to the right customer at the right time. Let us show you how.</p>
-            <a href="/services" class="btn">Learn More</a>
+            <a href="/services/#marketing" class="btn">Learn More</a>
         </div>
       </div>
-      <div class="flexbox flexbox-3">
+      <div id="trigger3" class="flexbox flexbox-3">
         <div class="flexbox__item flexbox__item-image">
           <img src="assets/images/home/jalapeno-slices.png" alt="bread" class="jalapeno">
           <img src="assets/images/home/bacon.png" alt="bread" class="bacon">
@@ -107,7 +107,7 @@
         <div class="flexbox__item flexbox__item-content">
             <h1>Design</h1>
             <p>Your visual identity online and offline. Purposeful design that ranges from brand identity to menu development to print collaterol.</p>
-            <a href="/services" class="btn">Learn More</a>
+            <a href="/services/#design" class="btn">Learn More</a>
         </div>
       </div>
 
@@ -120,10 +120,14 @@
 
     </div> <!-- end container -->
 
-    <footer>
+    <footer id="contact">
 
     </footer>
     <!-- scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/typed.js"></script>

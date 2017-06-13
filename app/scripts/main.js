@@ -74,6 +74,23 @@
 
   // Your custom JavaScript goes here
 
+  // Navigation Active class
+  // =================
+    $(function() {
+    // add active class to current page menu item
+    var currentPage = location.pathname.split('/');
+    var pageName = currentPage[currentPage.length - 2];
+
+    // home page - index list item must have "home" id
+    if (pageName === ""){
+      $('nav li a#home').addClass('active');
+    } else  if (pageName ===  pageName){
+      $('nav li a#'+pageName).addClass('active');
+    }
+  });
+
+  // Typed.js
+  // ======
   document.addEventListener('DOMContentLoaded', function(){
       Typed.new('.typed', {
         strings: ["Simple.", "Easy.", "Efficient.", "Effective."],
@@ -82,20 +99,54 @@
       });
   });
 
-  $(function() {
-
-  // add active class to current page menu item
-  var currentPage = location.pathname.split('/');
-  var pageName = currentPage[currentPage.length - 2];
-
-  // home page - index list item must have "home" id
-  if (pageName === ""){
-    $('nav li a#home').addClass('active');
-  } else  if (pageName ===  pageName){
-    $('nav li a#'+pageName).addClass('active');
-  }
-
+// Smooth Scroll Anchor
+// =================
+var $root = $('html, body');
+$('a').click(function() {
+    var href = $.attr(this, 'href');
+    $root.animate({
+        scrollTop: $(href).offset().top
+    }, 500, function () {
+        window.location.hash = href;
+    });
+    return false;
 });
+
+
+// ScrollMagic
+// =========
+var controller = new ScrollMagic.Controller();
+
+var tween = new TimelineMax()
+  .add([
+    TweenMax.to(".left", 0.5, {left: -40, top: -15, rotation: -2, scale: 1.02, ease:Linear.easeNone}),
+    TweenMax.to(".right", 0.5, {right: -40, top: 80, rotation: 2, scale: 1.02, ease:Linear.easeNone})
+  ]);
+
+var scene = new ScrollMagic.Scene({ triggerElement: "#trigger1" })
+		.setTween(tween)
+		.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+		.addTo(controller);
+
+var tween2 = new TimelineMax()
+  .add([
+    TweenMax.to(".cheese", 0.5, {left: -50, top: -15, rotation: -2, scale: 1.02, ease:Linear.easeNone}),
+    TweenMax.to(".butter", 0.5, {right: -130, bottom: -120, rotation: 2, scale: 1.02, ease:Linear.easeNone})
+  ]);
+var scene2 = new ScrollMagic.Scene({ triggerElement: "#trigger2" })
+		.setTween(tween2)
+		.addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
+		.addTo(controller);
+
+var tween3 = new TimelineMax()
+  .add([
+    TweenMax.to(".jalapeno", 0.5, {left: -50, top: -15, rotation: 2, scale: 1.02, ease:Linear.easeNone}),
+    TweenMax.to(".bacon", 0.5, {right: -130, bottom: -50, ease:Linear.easeNone})
+  ]);
+  var scene3 = new ScrollMagic.Scene({ triggerElement: "#trigger3" })
+      .setTween(tween3)
+      .addIndicators({name: "3 (duration: 0)"}) // add indicators (requires plugin)
+      .addTo(controller);
 
   // Video Javascript
   // ================

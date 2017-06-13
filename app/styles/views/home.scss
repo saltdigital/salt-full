@@ -127,20 +127,16 @@
 // Food Items
 .bread-1 {
   top: 27%;
-  right: -13%;
+  right: -8%;
   z-index: 2;
 }
 .bread-2 {
   top: -5%;
-  left: -15%;
+  left: -9%;
   z-index: 1;
 }
 .cheese {
   opacity: 0.8;
-  @include breakpoint(large) {
-    top: -15%;
-    left: -15%;
-  }
 }
 .butter {
   bottom: -25%;
