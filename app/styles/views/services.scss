@@ -7,6 +7,12 @@
     h1 {
       text-transform: uppercase;
       font-weight: 800;
+      @include breakpoint(medium down) {
+        border-bottom: 3px solid #D0011B;
+      }
+      @include breakpoint(small down) {
+        font-size: 35px;
+      }
     }
     p {
       max-width: 650px;
@@ -32,6 +38,11 @@
 } // end services
 
 .web {
+  h1 {
+    @include breakpoint(medium down) {
+      max-width: 460px;
+    }
+  }
   .service__headline {
     padding-top: 120px;
   }
@@ -69,7 +80,11 @@
     flex-wrap: wrap;
   }
   h1 {
-    border-color: white;
+    // border-color: white;
+    max-width: 350px;
+    @include breakpoint(small down) {
+      max-width: 220px;
+    }
   }
   &-category {
     text-align: left;
@@ -159,7 +174,13 @@
 
 .design {
   h1 {
-      max-width: 300px;
+      max-width: 145px;
+      @include breakpoint(medium) {
+        max-width: 200px;
+      }
+      @include breakpoint(large) {
+        max-width: 300px;
+      }
   }
   &-category {
     text-align: left;
@@ -177,6 +198,14 @@
       border-right: 3px solid #D00118;
       padding-right: 30px;
     }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: 100;
+    }
     @include breakpoint(medium) {
       h3 {
         max-width: 100%;
@@ -193,6 +222,9 @@
         margin: 0 auto;
         padding-left: 100px;
       }
+    li {
+      font-size: 20px;
+    }
       &:nth-of-type(2) {
         ul {
           padding-left: 0;
@@ -226,6 +258,8 @@
       }
       ul.brand-list > li {
         text-indent: -5px;
+        margin-bottom: 0;
+        font-size: 16px;
       }
       ul.brand-list > li:before {
         content: "-";

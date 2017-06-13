@@ -98,6 +98,10 @@ ul {
   }
   &__item-content {
     max-width: 350px;
+    text-align: center;
+    @include breakpoint(medium) {
+      text-align: left;
+    }
     h1 {
       font-weight: 800;
       letter-spacing: 2px;
