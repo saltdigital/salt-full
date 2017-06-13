@@ -89,6 +89,26 @@
     }
   });
 
+  // Mobile menu
+  // ==========
+  var $dropdown = $('.dropdown'),
+        $tcon = $('.tcon');
+
+  $tcon.on('click', function() {
+    var $this = $(this);
+
+    $this.toggleClass('tcon-transform');
+    $this.toggleClass('active');
+    $dropdown.toggleClass('active');
+  });
+
+  $('.dropdown .contact').on('click', function(){
+
+    $tcon.removeClass('tcon-transform');
+    $tcon.removeClass('active');
+    $dropdown.removeClass('active');
+  });
+
   // Typed.js
   // ======
   document.addEventListener('DOMContentLoaded', function(){

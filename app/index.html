@@ -54,10 +54,14 @@
           <div class="logo">
             <a href="/"><img src="assets/images/logo-black.png" alt="Salt Digital"/></a>
           </div>
-          <ul>
+          <button type="button" class="tcon tcon-menu--xcross hide-for-large" aria-label="toggle menu">
+            <span class="tcon-menu__lines" aria-hidden="true"></span>
+            <span class="tcon-visuallyhidden">toggle menu</span>
+          </button>
+          <ul class="dropdown">
             <li><a href="/" id="home">home</a></li>
             <li><a href="/services" id="services">services</a></li>
-            <li><a href="#contact">contact</a></li>
+            <li><a href="#contact" class="contact">contact</a></li>
           </ul>
         </div>
       </nav>
@@ -121,7 +125,25 @@
     </div> <!-- end container -->
 
     <footer id="contact">
-
+      <div class="container">
+        <div class="flexbox">
+          <div class="flexbox__half">
+            <a href="/">
+              <img src="assets/images/logo-white.png" alt="Salt Digital" class="logo">
+            </a>
+          </div>
+          <div class="flexbox__half">
+            <ul>
+              <li>
+                <a href="mailto:info@saltdigital.ca">info@saltdigital.ca</a>
+              </li>
+              <li>
+                &#169; 2017 Salt Digital all rights reserved.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- scripts -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>

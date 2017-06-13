@@ -1,6 +1,45 @@
 footer {
   background: black;
-  height: 250px;
+  height: 300px;
   width: 100%;
   margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+  @include breakpoint(medium) {
+    height: 220px;
+  }
+  @include breakpoint(large) {
+    height: 300px;
+  }
+  .logo {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    @include breakpoint(large) {
+      max-width: 677px;
+      position: absolute;
+      top: 10px;
+      left: -10px;
+    }
+  }
+  ul {
+    text-align: center;
+    @include breakpoint(medium) {
+      text-align: left;
+      position: absolute;
+      bottom: 25px;
+      right: 25px;
+    }
+  }
+  li, a {
+    color: white;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+  }
+  a {
+    &:hover {
+      color: grey;
+    }
+  }
 }
