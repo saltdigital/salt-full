@@ -38,12 +38,12 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 // Lint JavaScript
-gulp.task('lint', () =>
-  gulp.src(['app/scripts/**/*.js','!node_modules/**'])
-    .pipe($.eslint())
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
-);
+// gulp.task('lint', () =>
+//   gulp.src(['app/scripts/**/*.js','!node_modules/**'])
+//     .pipe($.eslint())
+//     .pipe($.eslint.format())
+//     .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
+// );
 
 // Optimize images
 gulp.task('images', () =>
@@ -98,7 +98,10 @@ gulp.task('styles', () => {
     .pipe($.sass({
       precision: 10
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe($.autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+    }))
     .pipe(gulp.dest('.tmp/styles'))
     // Concatenate and minify styles
     .pipe($.if('*.css', $.cssnano()))
@@ -180,7 +183,7 @@ gulp.task('serve', ['scripts', 'styles'], () => {
 
   gulp.watch(['app/**/*.html'], reload);
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['lint', 'scripts', reload]);
+  gulp.watch(['app/scripts/**/*.js'], [ 'scripts', reload]);
   gulp.watch(['app/assets/**/*'], reload);
 });
 
@@ -204,7 +207,7 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['lint', 'html', 'scripts', 'images', 'videos', 'copy'],
+    ['html', 'scripts', 'images', 'videos', 'copy'],
     'generate-service-worker',
     cb
   )

@@ -30,6 +30,7 @@
     @include breakpoint(small down) {
       position: absolute;
       z-index: -1;
+      left: 0;
       opacity: 0.5;
     }
     img {
@@ -89,6 +90,15 @@
   }
 }
 
+.home {
+  .flexbox {
+    &__item-content {
+      @include breakpoint(small down) {
+        height: 300px;
+      }
+    }
+  }
+}
 
 .flexbox {
   margin-bottom: 40px;

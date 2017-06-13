@@ -11,6 +11,12 @@ footer {
   @include breakpoint(large) {
     height: 300px;
   }
+  .container {
+    @include breakpoint(small down) {
+      position: absolute;
+      bottom: 0;
+    }
+  }
   .logo {
     max-width: 350px;
     width: 100%;
