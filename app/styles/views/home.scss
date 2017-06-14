@@ -8,6 +8,12 @@
     max-width: 450px;
     width: 100%;
     text-align: center;
+    @include breakpoint(small down) {
+      position: absolute;
+      top: 53%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
     @include breakpoint(medium) {
       text-align: left;
     }
@@ -139,17 +145,17 @@
 // Food Items
 .bread-1 {
   top: 30px;
-  right: -80px;
+  right: -25px;
   z-index: 2;
 }
 .bread-2 {
   top: -10px;
-  left: 10px;
+  left: -10px;
   z-index: 1;
 }
 .cheese {
   opacity: 0.8;
-  left: 50px;
+  left: 30px;
 }
 .butter {
   bottom: -140px;
@@ -158,11 +164,11 @@
 }
 .jalapeno {
   top: 0;
-  left: 50px;
+  left: 0;
 }
 .bacon {
   opacity: 0.9;
-  bottom: 0;
-  right: -80px;
+  bottom: -9px;
+  right: -31px;
   transform: rotate(280deg);
 }

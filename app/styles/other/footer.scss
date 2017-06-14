@@ -15,12 +15,13 @@ footer {
     }
   }
   .logo {
-    max-width: 350px;
+    max-width: 250px;
     width: 100%;
     height: auto;
     @include breakpoint(medium) {
       position: absolute;
       left: 0;
+      max-width: 350px;
     }
     @include breakpoint(large) {
       max-width: 500px;
@@ -57,5 +58,8 @@ footer {
         }
       }
     }
+  }
+  .disclaimer {
+    font-size: 12px;
   }
 }
