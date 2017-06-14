@@ -144,9 +144,9 @@ if($('body').hasClass('home')) {
       TweenMax.to(".right", 0.5, {right: -40, top: 40, rotation: 2, scale: 1.02, ease:Linear.easeNone})
     ]);
 
-  var scene = new ScrollMagic.Scene({ triggerElement: "#trigger1" })
+  var scene = new ScrollMagic.Scene({ triggerElement: "#trigger1", duration: 500})
   		.setTween(tween)
-  		// .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+  		// .addIndicators({name: "1 (duration: 500)"}) // add indicators (requires plugin)
   		.addTo(controller);
 
   var tween2 = new TimelineMax()
@@ -154,9 +154,9 @@ if($('body').hasClass('home')) {
       TweenMax.to(".cheese", 0.5, {left: 0, top: -15, rotation: -2, scale: 1.02, ease:Linear.easeNone}),
       TweenMax.to(".butter", 0.5, {right: -180, bottom: -150, rotation: 2, scale: 1.02, ease:Linear.easeNone})
     ]);
-  var scene2 = new ScrollMagic.Scene({ triggerElement: "#trigger2" })
+  var scene2 = new ScrollMagic.Scene({ triggerElement: "#trigger2", duration: 500 })
   		.setTween(tween2)
-  		// .addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
+  		// .addIndicators({name: "2 (duration: 500)"}) // add indicators (requires plugin)
   		.addTo(controller);
 
   var tween3 = new TimelineMax()
@@ -164,9 +164,9 @@ if($('body').hasClass('home')) {
       TweenMax.to(".jalapeno", 0.5, {left: -30, top: -15, rotation: 2, scale: 1.02, ease:Linear.easeNone}),
       TweenMax.to(".bacon", 0.5, {right: -40, bottom: -20, ease:Linear.easeNone})
     ]);
-    var scene3 = new ScrollMagic.Scene({ triggerElement: "#trigger3" })
+    var scene3 = new ScrollMagic.Scene({ triggerElement: "#trigger3", duration: 500 })
         .setTween(tween3)
-        // .addIndicators({name: "3 (duration: 0)"}) // add indicators (requires plugin)
+        // .addIndicators({name: "3 (duration: 500)"}) // add indicators (requires plugin)
         .addTo(controller);
 }
 
