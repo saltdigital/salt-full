@@ -140,8 +140,8 @@ if($('body').hasClass('home')) {
 
   var tween = new TimelineMax()
     .add([
-      TweenMax.to(".left", 0.5, {left: -40, top: -15, rotation: -2, scale: 1.02, ease:Linear.easeNone}),
-      TweenMax.to(".right", 0.5, {right: -40, top: 80, rotation: 2, scale: 1.02, ease:Linear.easeNone})
+      TweenMax.to(".left", 0.5, {left: 0, top: -15, rotation: -2, scale: 1.02, ease:Linear.easeNone}),
+      TweenMax.to(".right", 0.5, {right: -90, top: 70, rotation: 2, scale: 1.02, ease:Linear.easeNone})
     ]);
 
   var scene = new ScrollMagic.Scene({ triggerElement: "#trigger1" })
@@ -151,8 +151,8 @@ if($('body').hasClass('home')) {
 
   var tween2 = new TimelineMax()
     .add([
-      TweenMax.to(".cheese", 0.5, {left: -50, top: -15, rotation: -2, scale: 1.02, ease:Linear.easeNone}),
-      TweenMax.to(".butter", 0.5, {right: -130, bottom: -120, rotation: 2, scale: 1.02, ease:Linear.easeNone})
+      TweenMax.to(".cheese", 0.5, {left: 20, top: -15, rotation: -2, scale: 1.02, ease:Linear.easeNone}),
+      TweenMax.to(".butter", 0.5, {right: -180, bottom: -150, rotation: 2, scale: 1.02, ease:Linear.easeNone})
     ]);
   var scene2 = new ScrollMagic.Scene({ triggerElement: "#trigger2" })
   		.setTween(tween2)
@@ -161,8 +161,8 @@ if($('body').hasClass('home')) {
 
   var tween3 = new TimelineMax()
     .add([
-      TweenMax.to(".jalapeno", 0.5, {left: -50, top: -15, rotation: 2, scale: 1.02, ease:Linear.easeNone}),
-      TweenMax.to(".bacon", 0.5, {right: -130, bottom: -50, ease:Linear.easeNone})
+      TweenMax.to(".jalapeno", 0.5, {left: 30, top: -15, rotation: 2, scale: 1.02, ease:Linear.easeNone}),
+      TweenMax.to(".bacon", 0.5, {right: -90, bottom: -20, ease:Linear.easeNone})
     ]);
     var scene3 = new ScrollMagic.Scene({ triggerElement: "#trigger3" })
         .setTween(tween3)

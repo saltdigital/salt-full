@@ -63,6 +63,13 @@ gulp.task('videos', () =>
     .pipe($.size({title: 'videos'}))
 );
 
+// Compile fonts
+gulp.task('fonts', ()=>
+  gulp.src('app/assets/fonts/**/*')
+  .pipe(gulp.dest('dist/assets/fonts'))
+  .pipe($.size({title: 'fonts'}))
+);
+
 // Copy all files at the root level (app)
 gulp.task('copy', () =>
   gulp.src([
@@ -207,7 +214,7 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['html', 'scripts', 'images', 'videos', 'copy'],
+    ['html', 'scripts', 'images', 'videos', 'copy', 'fonts'],
     'generate-service-worker',
     cb
   )
