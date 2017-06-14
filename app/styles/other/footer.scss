@@ -21,10 +21,14 @@ footer {
     max-width: 350px;
     width: 100%;
     height: auto;
-    @include breakpoint(large) {
-      max-width: 677px;
+    @include breakpoint(medium) {
       position: absolute;
-      top: 10px;
+      left: 0;
+    }
+    @include breakpoint(large) {
+      max-width: 500px;
+      position: absolute;
+      top: 85px;
       left: -10px;
     }
   }
@@ -46,6 +50,15 @@ footer {
   a {
     &:hover {
       color: grey;
+    }
+  }
+  .flexbox {
+    &__half {
+      &:first-of-type {
+        @include breakpoint(small down) {
+          text-align: center;
+        }
+      }
     }
   }
 }

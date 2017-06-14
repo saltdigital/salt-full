@@ -1,9 +1,18 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
+  display: box;
   margin: 0;
   background: #FFFFFF;
   font-family: 'Pangram', sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Pangram', sans-serif;
@@ -77,13 +86,16 @@ ul {
 }
 
 .flexbox {
-  display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   height: 100%;
+  @include breakpoint(small down) {
+    display: -ms-flexbox;
+  }
   @include breakpoint(medium) {
     flex-direction: row;
+    display: flex;
   }
   &__half {
     flex: 0 0 100%;
@@ -95,7 +107,7 @@ ul {
   &__third {
     flex: 0 0 100%;
     height: 100%;
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       flex: 0 0 30%;
     }
   }

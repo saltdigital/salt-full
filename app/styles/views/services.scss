@@ -92,6 +92,7 @@
   &-category {
     text-align: left;
     margin-bottom: 30px;
+    position: relative;
     h3 {
       max-width: 153px;
       width: 100%;
@@ -137,6 +138,9 @@
       p {
         position: absolute;
         max-width: 450px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
         opacity: 0;
         transition: 300ms ease;
@@ -190,6 +194,9 @@
     .flexbox__half {
       width: 100%;
       justify-content: center;
+      @include breakpoint(medium) {
+        flex: 0 0 50%;
+      }
     }
     &__content {
       max-width: 450px;
